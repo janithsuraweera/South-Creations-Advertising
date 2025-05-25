@@ -14,6 +14,10 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animate On Scroll Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Facebook SDK -->
@@ -55,7 +59,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>Welcome to South Creations</h1>
             <p>Your Premier Digital Printing Partner</p>
             <a href="#contact" class="cta-button">Get Started</a>
@@ -64,34 +68,34 @@
 
     <!-- Services Section -->
     <section id="services" class="services">
-        <h2>Our Services</h2>
+        <h2 data-aos="fade-in">Our Services</h2>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-print"></i>
                 <h3>Digital Printing</h3>
                 <p>High-quality digital printing for banners, posters, business cards, and all your printing needs</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-paint-brush"></i>
                 <h3>Design Services</h3>
                 <p>Professional graphic design for logos, brochures, and marketing materials</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-t-shirt"></i>
                 <h3>Custom Apparel</h3>
                 <p>Custom t-shirt printing and embroidery for teams, events, and businesses</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
                 <i class="fas fa-sign"></i>
                 <h3>Signage</h3>
                 <p>Custom signs, vehicle wraps, and outdoor advertising solutions</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-id-card"></i>
                 <h3>Business Cards</h3>
                 <p>Professional business card design and printing with premium finishes</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-images"></i>
                 <h3>Photo Printing</h3>
                 <p>High-quality photo printing and photo frame services</p>
@@ -101,11 +105,11 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-        <h2>Our Work</h2>
+        <h2 data-aos="fade-in">Our Work</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
                 <a href="https://web.facebook.com/SouthCreationsAdvertising/posts/pfbid0BVsLUSw8fBEuw9LHp2t95fHWk8thYoRNsdywikNMqeyaXgVGLHLbKQAW348d99Kkl" target="_blank" class="portfolio-link">
-                    <img src="./images/portfolio/1.jpg" alt="Our Latest Work">
+                    <img src="images/portfolio/1.jpg" alt="Our Work 1">
                     <div class="portfolio-overlay">
                         <h3>View on Facebook</h3>
                         <p>Click to see our latest work</p>
@@ -113,9 +117,9 @@
                     </div>
                 </a>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
                 <a href="https://web.facebook.com/SouthCreationsAdvertising/posts/pfbid07Nv8u1aFPLzsiz7yw3v2LoK7JSGpjvGTiaYhesPguMuyS3kd9upGRcfib4WXgyGcl" target="_blank" class="portfolio-link">
-                    <img src="images/portfolio/2.jpg" alt="Our Work">
+                    <img src="images/portfolio/2.jpg" alt="Our Work 2">
                     <div class="portfolio-overlay">
                         <h3>View on Facebook</h3>
                         <p>Click to see our latest work</p>
@@ -128,15 +132,15 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <div class="contact-info">
+        <h2 data-aos="fade-in">Contact Us</h2>
+        <div class="contact-container" data-aos="slide-up">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
                 <h3>Get in Touch</h3>
                 <p><i class="fas fa-phone"></i>+94 76 223 1797</p>
                 <p><i class="fas fa-envelope"></i>scagalle@gmail.com</p>
                 <p><i class="fas fa-map-marker-alt"></i> No.15, Eramudugaha Junction, Unawatuna, Sri Lanka</p>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" data-aos="fade-left" data-aos-delay="100">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Message" required></textarea>
@@ -147,7 +151,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-content" data-aos="fade-up">
             <div class="footer-section">
                 <h3>South Creations</h3>
                 <p>Your trusted partner in digital printing</p>
@@ -164,6 +168,15 @@
                 <a href="https://web.facebook.com/SouthCreationsAdvertising" target="_blank">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
+                <!-- Facebook Like Button -->
+                <div class="fb-like" 
+                     data-href="https://web.facebook.com/SouthCreationsAdvertising" 
+                     data-width=""
+                     data-layout="button" 
+                     data-action="like" 
+                     data-size="small"  
+                     data-share="true">
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -172,5 +185,11 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- AOS Animate On Scroll Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html> 
