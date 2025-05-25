@@ -907,7 +907,7 @@ footer {
 
 .digital-printing-animation {
     width: 100%;
-    max-width: 600px; /* Match SVG viewBox width */
+    max-width: 550px; /* Match new SVG viewBox width */
     margin: 2rem auto; /* Center the animation and add spacing */
     padding: 1rem;
     background-color: var(--white); /* White background for the animation area */
@@ -922,34 +922,46 @@ footer {
     height: auto;
 }
 
-/* Styles for new SVG elements */
+/* Styles for SVG elements */
 .digital-printing-animation rect,
 .digital-printing-animation circle {
     transform-box: fill-box;
-    transform-origin: center;
+    /* transform-origin is set per animation below */
 }
 
-/* Print Head Animation */
-@keyframes printHeadMove {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(200px); } /* Adjust distance based on new print area width */
-    100% { transform: translateX(0); }
+/* Print Head Animation (Horizontal across vertical paper) */
+@keyframes printHeadMoveHorizontal {
+    0%, 100% { transform: translateX(0); } /* Start and end at the same position */
+    50% { transform: translateX(310px); } /* Move horizontally across the paper path length */
 }
 
 .print-head {
-    animation: printHeadMove 2s infinite linear; /* Faster print head movement */
+    animation: printHeadMoveHorizontal 1.5s infinite linear; /* Print head movement speed */
+    transform-origin: 0 0; /* Animation origin */
 }
 
-/* Paper Feed Animation */
-@keyframes paperFeed {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(480px); } /* Move paper through the entire path */
+/* Paper Feed Animation (Vertical) */
+@keyframes paperFeedVertical {
+    0% { transform: translateY(0); } /* Start at the top of the vertical path */
+    100% { transform: translateY(190px); } /* Move paper vertically through the paper area height (approx) */
 }
 
 .paper-in,
 .paper-out,
 .paper-processing {
-    animation: paperFeed 5s infinite linear; /* Adjust paper feed speed */
+    animation: paperFeedVertical 8s infinite linear; /* Paper feed speed */
+    transform-origin: 0 0; /* Animation origin */
+}
+
+/* Printing Layer Animation (Reveal printing as paper moves vertically) */
+@keyframes printRevealVertical {
+    0% { height: 0; } /* Start with height 0 */
+    100% { height: 190px; } /* Reveal full height of the paper area */
+}
+
+.printing-layer {
+    transform-origin: 0 0; /* Animation origin */
+    animation: printRevealVertical 8s infinite linear; /* Match paper feed animation duration */
 }
 
 /* Roller Rotation Animation */
@@ -960,16 +972,18 @@ footer {
 
 .roller {
     animation: rollerRotate 3s infinite linear; /* Rotate rollers */
+    transform-origin: center; /* Rotate around the center */
 }
 
-/* Status Indicator Animation */
-@keyframes statusBlink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+/* Status Indicator Animation (subtle pulse) */
+@keyframes statusPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
 }
 
 .status-indicator {
-    animation: statusBlink 1.5s infinite steps(1); /* Simple blinking effect */
+    animation: statusPulse 2s infinite ease-in-out; /* Pulsing effect */
+    transform-origin: center;
 }
 
 /* Responsive adjustments */
@@ -977,17 +991,22 @@ footer {
     .digital-printing-animation {
         margin: 1.5rem auto;
         padding: 0.8rem;
+        max-width: 90%; /* Adjust max width for smaller horizontal space */
     }
     
-    @keyframes printHeadMove {
-        0% { transform: translateX(0); }
-        50% { transform: translateX(150px); } /* Adjust distance */
-        100% { transform: translateX(0); }
+    @keyframes printHeadMoveHorizontal {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(190px); } /* Adjust distance */
     }
     
-    @keyframes paperFeed {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(380px); } /* Adjust distance */
+     @keyframes paperFeedVertical {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(150px); } /* Adjust distance */
+    }
+    
+     @keyframes printRevealVertical {
+        0% { height: 0; }
+        100% { height: 150px; } /* Adjust height */
     }
 }
 
@@ -995,17 +1014,22 @@ footer {
     .digital-printing-animation {
         margin: 1rem auto;
         padding: 0.5rem;
+        max-width: 100%; /* Adjust max width */
     }
     
-    @keyframes printHeadMove {
-        0% { transform: translateX(0); }
-        50% { transform: translateX(100px); } /* Adjust distance */
-        100% { transform: translateX(0); }
+    @keyframes printHeadMoveHorizontal {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(130px); } /* Adjust distance */
     }
     
-    @keyframes paperFeed {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(280px); } /* Adjust distance */
+     @keyframes paperFeedVertical {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(100px); } /* Adjust distance */
+    }
+    
+     @keyframes printRevealVertical {
+        0% { height: 0; }
+        100% { height: 100px; } /* Adjust height */
     }
 }
 </body>

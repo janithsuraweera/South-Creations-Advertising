@@ -70,47 +70,52 @@
     <section id="services" class="services">
         <h2 data-aos="fade-in" data-aos-once="true">Our Services</h2>
         <div class="digital-printing-animation" data-aos="fade-up" data-aos-once="true">
-            <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-                <!-- Machine Base -->
-                <rect x="40" y="100" width="520" height="100" fill="#bdc3c7" rx="10" ry="10"/>
+            <svg viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg">
+                <!-- Machine Body - Main casing with refined colors (Horizontal) -->
+                <rect x="20" y="50" width="510" height="250" fill="#e0e0e0" rx="15" ry="15"/> <!-- Light Grey with less rounded corners -->
 
-                <!-- Machine Top Cover -->
-                <rect x="50" y="40" width="500" height="70" fill="#7f8c8d" rx="8" ry="8"/>
+                <!-- Darker Top Section (More integrated with the body) -->
+                <rect x="20" y="50" width="510" height="40" fill="#bdbdbd" rx="15" ry="15"/> <!-- Slightly darker grey top -->
 
-                <!-- Paper Input Tray -->
-                <rect x="10" y="110" width="40" height="70" fill="#95a5a6"/>
-                <rect x="15" y="115" width="30" height="60" fill="#ecf0f1" class="paper-in"/>
+                <!-- Control Panel Area (Smaller and repositioned to top left) -->
+                 <rect x="30" y="55" width="70" height="30" fill="#757575" rx="5" ry="5"/> <!-- Dark Grey -->
+                 <circle cx="40" cy="70" r="4" fill="#f4436c" class="status-indicator"/> <!-- Red status light -->
+                 <rect x="55" y="67" width="20" height="6" fill="#bdbdbd" rx="1" ry="1"/> <!-- Simple display -->
+                 <rect x="80" y="67" width="10" height="6" fill="#bdbdbd" rx="1" ry="1"/> <!-- Simple button -->
 
-                <!-- Internal Paper Path Guides -->
-                <rect x="80" y="120" width="440" height="10" fill="#95a5a6"/>
-                <rect x="80" y="170" width="440" height="10" fill="#95a5a6"/>
+                <!-- Ink Cartridges (Simplified, on top panel) -->
+                <rect x="110" y="60" width="15" height="15" fill="#1976d2" rx="3" ry="3"/> <!-- Blue -->
+                <rect x="130" y="60" width="15" height="15" fill="#d32f2f" rx="3" ry="3"/> <!-- Red -->
+                <rect x="150" y="60" width="15" height="15" fill="#fbc02d" rx="3" ry="3"/> <!-- Yellow -->
+                <rect x="170" y="60" width="15" height="15" fill="#388e3c" rx="3" ry="3"/> <!-- Green -->
 
-                <!-- Rollers (for paper movement) -->
-                <circle cx="100" cy="145" r="15" fill="#5a6a6a" class="roller"/>
-                <circle cx="250" cy="145" r="15" fill="#5a6a6a" class="roller"/>
-                <circle cx="400" cy="145" r="15" fill="#5a6a6a" class="roller"/>
+                <!-- Paper Input Slot (on the side for horizontal) -->
+                <rect x="0" y="100" width="30" height="150" fill="#b0bec5"/> <!-- Blue Grey -->
+                <rect x="5" y="105" width="20" height="140" fill="#ffffff" class="paper-in"/> <!-- White Paper -->
 
-                <!-- Paper inside machine -->
-                <rect x="80" y="130" width="440" height="40" fill="#ecf0f1" class="paper-processing"/>
+                <!-- Paper Output Slot (on the other side for horizontal) -->
+                <rect x="520" y="100" width="30" height="150" fill="#90a4ae"/> <!-- Blue Grey -->
+                <rect x="525" y="105" width="20" height="140" fill="#ffffff" class="paper-out"/> <!-- White Paper -->
 
-                <!-- Print Head Area -->
-                <rect x="180" y="50" width="240" height="50" fill="#95a5a6" rx="5" ry="5"/>
+                <!-- Internal Paper Path Guides (Thinner and integrated) -->
+                <rect x="40" y="90" width="470" height="10" fill="#c5cae9" rx="5" ry="5"/> <!-- Top Guide -->
+                <rect x="40" y="250" width="470" height="10" fill="#c5cae9" rx="5" ry="5"/> <!-- Bottom Guide -->
 
-                <!-- Print Head (will animate) -->
-                <rect x="190" y="60" width="20" height="30" fill="#2c3e50" class="print-head"/>
+                <!-- Rollers (Positioned along vertical paper path) -->
+                <!-- Adjusting positions to be within the paper path guides area -->
+                <circle cx="100" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
+                <circle cx="250" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
+                <circle cx="400" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
 
-                <!-- Ink Cartridges -->
-                <rect x="430" y="55" width="15" height="15" fill="#3498db"/>
-                <rect x="450" y="55" width="15" height="15" fill="#e74c3c"/>
-                <rect x="470" y="55" width="15" height="15" fill="#f39c12"/>
-                <rect x="490" y="55" width="15" height="15" fill="#2ecc71"/> <!-- Green ink -->
+                <!-- Paper inside machine (Vertical) -->
+                <rect x="50" y="100" width="450" height="150" fill="#ffffff" class="paper-processing"/> <!-- White Paper -->
 
-                <!-- Paper Output Tray -->
-                <rect x="550" y="110" width="40" height="70" fill="#95a5a6"/>
-                <rect x="555" y="115" width="30" height="60" fill="#ecf0f1" class="paper-out"/>
+                <!-- Printing Layer on Paper (Initially hidden, will be revealed vertically) -->
+                <rect x="50" y="100" width="450" height="0" fill="#212121" class="printing-layer"/> <!-- Dark Grey/Black for print -->
 
-                <!-- Status Indicator (simple circle) -->
-                <circle cx="520" cy="65" r="5" fill="#2ecc71" class="status-indicator"/>
+                <!-- Print Head (Animates Horizontally across vertical paper) -->
+                <!-- Positioned over the paper path -->
+                <rect x="50" y="140" width="40" height="70" fill="#424242" class="print-head"/> <!-- Very Dark Grey -->
 
             </svg>
         </div>
