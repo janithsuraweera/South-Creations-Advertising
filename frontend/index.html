@@ -72,10 +72,10 @@
         <div class="digital-printing-animation" data-aos="fade-up" data-aos-once="true">
             <svg viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg">
                 <!-- Machine Body - Main casing with refined colors (Horizontal) -->
-                <rect x="20" y="50" width="510" height="250" fill="#e0e0e0" rx="15" ry="15"/> <!-- Light Grey with less rounded corners -->
+                <rect x="20" y="50" width="510" height="250" fill="#ffffff" rx="15" ry="15"/> <!-- White -->
 
                 <!-- Darker Top Section (More integrated with the body) -->
-                <rect x="20" y="50" width="510" height="40" fill="#bdbdbd" rx="15" ry="15"/> <!-- Slightly darker grey top -->
+                <rect x="20" y="50" width="510" height="40" fill="#f5f5f5" rx="15" ry="15"/> <!-- Slightly off-white/light grey for subtle contrast -->
 
                 <!-- Control Panel Area (Smaller and repositioned to top left) -->
                  <rect x="30" y="55" width="70" height="30" fill="#757575" rx="5" ry="5"/> <!-- Dark Grey -->
@@ -88,6 +88,21 @@
                 <rect x="130" y="60" width="15" height="15" fill="#d32f2f" rx="3" ry="3"/> <!-- Red -->
                 <rect x="150" y="60" width="15" height="15" fill="#fbc02d" rx="3" ry="3"/> <!-- Yellow -->
                 <rect x="170" y="60" width="15" height="15" fill="#388e3c" rx="3" ry="3"/> <!-- Green -->
+
+                <!-- Pass Selection Buttons -->
+                <!-- Button 6-Pass -->
+                <rect x="250" y="60" width="70" height="25" fill="#4CAF50" rx="5" ry="5" class="pass-button pass-button-6"/> <!-- Green -->
+                <text x="285" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">6 Pass</text>
+
+                <!-- Button 4-Pass -->
+                <rect x="330" y="60" width="70" height="25" fill="#FF9800" rx="5" ry="5" class="pass-button pass-button-4"/> <!-- Orange -->
+                <text x="365" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">4 Pass</text>
+
+                <!-- Button 2-Pass -->
+                <rect x="410" y="60" width="70" height="25" fill="#F44336" rx="5" ry="5" class="pass-button pass-button-2"/> <!-- Red -->
+                <text x="445" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">2 Pass</text>
+
+                <!-- Note: JavaScript is needed to make these buttons interactive and change animation speed -->
 
                 <!-- Paper Input Slot (on the side for horizontal) -->
                 <rect x="0" y="100" width="30" height="150" fill="#b0bec5"/> <!-- Blue Grey -->

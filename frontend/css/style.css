@@ -741,7 +741,8 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
+        /* animation-delay is removed for dynamic control */
     }
 
     @keyframes paperFeedVertical {
@@ -776,11 +777,25 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        /* animation is applied via speed classes by JavaScript */
+        /* animation-delay is removed for dynamic control */
     }
 
     .roller {
         animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
+
+    /* Print Head Speed Classes (Responsive) */
+    .print-head.speed-low {
+        animation: printHeadMoveHorizontal 4s ease-in-out forwards; /* 6-Pass: Slower speed */
+    }
+
+    .print-head.speed-medium {
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* 4-Pass: Medium speed */
+    }
+
+    .print-head.speed-high {
+        animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
     }
 }
 
@@ -914,7 +929,8 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
+        /* animation-delay is removed for dynamic control */
     }
 
     @keyframes paperFeedVertical {
@@ -949,11 +965,25 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        /* animation is applied via speed classes by JavaScript */
+        /* animation-delay is removed for dynamic control */
     }
 
     .roller {
         animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
+
+    /* Print Head Speed Classes (Responsive) */
+    .print-head.speed-low {
+        animation: printHeadMoveHorizontal 4s ease-in-out forwards; /* 6-Pass: Slower speed */
+    }
+
+    .print-head.speed-medium {
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* 4-Pass: Medium speed */
+    }
+
+    .print-head.speed-high {
+        animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
     }
 }
 
@@ -1022,8 +1052,22 @@ footer {
 }
 
 .print-head {
-    animation: printHeadMoveHorizontal 2s infinite ease-in-out; /* Print head movement speed - Adjusted duration and timing */
+    animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
     transform-origin: 0 0; /* Animation origin */
+    /* animation-delay is removed for dynamic control */
+}
+
+/* Print Head Speed Classes (Applied by JavaScript) */
+.print-head.speed-low {
+    animation: printHeadMoveHorizontal 4s ease-in-out forwards; /* 6-Pass: Slower speed */
+}
+
+.print-head.speed-medium {
+    animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* 4-Pass: Medium speed */
+}
+
+.print-head.speed-high {
+    animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
 }
 
 /* Paper Feed Animation (Vertical) */
@@ -1132,11 +1176,25 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
+        /* animation-delay is removed for dynamic control */
     }
 
     .roller {
         animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
+
+    /* Print Head Speed Classes (Responsive) */
+    .print-head.speed-low {
+        animation: printHeadMoveHorizontal 4s ease-in-out forwards; /* 6-Pass: Slower speed */
+    }
+
+    .print-head.speed-medium {
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* 4-Pass: Medium speed */
+    }
+
+    .print-head.speed-high {
+        animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
     }
 }
 
@@ -1184,11 +1242,25 @@ footer {
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
+        /* animation-delay is removed for dynamic control */
     }
 
     .roller {
         animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
+
+    /* Print Head Speed Classes (Responsive) */
+    .print-head.speed-low {
+        animation: printHeadMoveHorizontal 4s ease-in-out forwards; /* 6-Pass: Slower speed */
+    }
+
+    .print-head.speed-medium {
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* 4-Pass: Medium speed */
+    }
+
+    .print-head.speed-high {
+        animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
     }
 }
 </body>
