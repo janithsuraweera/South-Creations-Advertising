@@ -599,11 +599,11 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Mobile size adjustment */
     }
 
     .hero-content p {
-        font-size: 1.4rem;
+        font-size: 1.2rem; /* Mobile size adjustment */
     }
 
     .cta-button {
@@ -612,7 +612,7 @@ footer {
     }
 
     .services {
-        padding: 4rem 5%; /* Adjust padding */
+        padding: 4rem 3%; /* Adjust padding for smaller screens */
     }
 
     .services h2 {
@@ -621,7 +621,7 @@ footer {
     }
 
     .services-grid {
-        gap: 2rem;
+        gap: 1.5rem; /* Adjust gap for smaller screens */
     }
     
     .service-card {
@@ -638,7 +638,7 @@ footer {
     }
 
     .portfolio {
-        padding: 4rem 5%; /* Adjust padding */
+        padding: 4rem 3%; /* Adjust padding for smaller screens */
     }
 
     .portfolio h2 {
@@ -648,11 +648,16 @@ footer {
 
     .portfolio-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem; /* Adjust gap for smaller screens */
     }
     
     .portfolio-item {
         max-width: 100%;
+    }
+    
+    .portfolio-item img {
+        width: 100%; /* Ensure images scale */
+        height: auto;
     }
     
     .portfolio-overlay h3 {
@@ -672,7 +677,7 @@ footer {
     }
     
     .portfolio-item.facebook-post iframe {
-        min-height: 400px;
+        min-height: 300px; /* Adjust iframe height for mobile */
     }
 
     .social-links {
@@ -684,7 +689,7 @@ footer {
     }
 
     .contact {
-        padding: 4rem 5%; /* Adjust padding */
+        padding: 4rem 3%; /* Adjust padding for smaller screens */
     }
 
     .contact h2 {
@@ -693,7 +698,14 @@ footer {
     }
 
     .contact-container {
-        padding: 2rem;
+         flex-direction: column; /* Stack contact info and form */
+         gap: 2rem; /* Space between stacked items */
+         padding: 2rem 1.5rem; /* Adjust container padding */
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%; /* Full width for stacked items */
     }
 
     .contact-info h3 {
@@ -709,13 +721,26 @@ footer {
         gap: 1rem;
     }
 
-    footer {
-        padding: 3rem 5% 1rem; /* Adjust padding */
+    .contact-form input,
+    .contact-form textarea {
+         width: 100%; /* Ensure form inputs are full width */
+         padding: 0.8rem; /* Adjust padding */
     }
 
+    .submit-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 3rem 3% 1rem; /* Adjust padding for smaller screens */
+    }
+    
     .footer-content {
-        gap: 2rem;
+        flex-direction: column; /* Stack footer sections */
+        gap: 2rem; /* Space between stacked sections */
         margin-bottom: 2rem;
+        text-align: center; /* Center footer content */
     }
     
     .footer-section h3 {
@@ -740,19 +765,25 @@ footer {
         right: 20px;
     }
 
-    .print-head {
-        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
-        /* animation-delay is removed for dynamic control */
+    .digital-printing-animation {
+        margin: 1.5rem auto;
+        padding: 0.8rem;
+        max-width: 90%; /* Adjust max width for smaller horizontal space */
     }
-
-    @keyframes paperFeedVertical {
+    
+    @keyframes printHeadMoveHorizontal {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(410px); } /* Adjust distance */
+    }
+    
+     @keyframes paperFeedVertical {
         0% { transform: translateY(0); }
-        100% { transform: translateY(300px); } /* Adjust distance */
+        100% { transform: translateY(400px); } /* Adjust distance */
     }
-
-    @keyframes printRevealVertical {
+    
+     @keyframes printRevealVertical {
         0% { height: 0; }
-        50% { height: 150px; } /* Adjust height */
+        30% { height: 150px; } /* Adjust height */
         100% { height: 150px; }
     }
 
@@ -768,7 +799,7 @@ footer {
 
     @keyframes printingTextReveal {
         0% { clip-path: inset(100% 0 0 0); }
-        50% { clip-path: inset(0 0 0 0); }
+        30% { clip-path: inset(0 0 0 0); }
         100% { clip-path: inset(0 0 0 0); }
     }
 
@@ -777,7 +808,7 @@ footer {
     }
 
     .print-head {
-        /* animation is applied via speed classes by JavaScript */
+        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
         /* animation-delay is removed for dynamic control */
     }
 
@@ -821,76 +852,76 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Further decrease font size for very small screens */
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Further decrease font size for very small screens */
     }
 
     .services {
-        padding: 3rem 5%;
+        padding: 3rem 2%; /* Adjust padding for very small screens */
     }
     
     .services h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .service-card {
-        padding: 1.5rem;
+        padding: 1.2rem; /* Adjust padding for very small screens */
     }
     
     .service-card i {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Adjust icon size */
     }
     
     .service-card h3 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .portfolio {
-        padding: 3rem 5%;
+        padding: 3rem 2%; /* Adjust padding for very small screens */
     }
     
     .portfolio h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .portfolio-grid {
-        gap: 1.5rem;
+        gap: 1rem; /* Adjust gap for very small screens */
     }
     
     .portfolio-overlay h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .portfolio-overlay p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
     .portfolio-overlay i {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .contact {
-        padding: 3rem 5%;
+        padding: 3rem 2%; /* Adjust padding for very small screens */
     }
 
     .contact h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .contact-container {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem; /* Adjust container padding */
     }
 
     .contact-info h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .contact-form input,
     .contact-form textarea {
-        padding: 1rem;
+        padding: 0.7rem; /* Adjust padding */
     }
 
     .submit-button {
@@ -899,21 +930,19 @@ footer {
     }
 
     footer {
-        padding: 2rem 5% 0.8rem;
+        padding: 2rem 2% 0.5rem; /* Adjust padding for very small screens */
     }
     
     .footer-content {
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
+        gap: 1rem; /* Adjust gap for very small screens */
     }
     
     .footer-section h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .footer-section a {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
     }
     
     .footer-bottom {
@@ -928,19 +957,30 @@ footer {
         right: 15px;
     }
 
-    .print-head {
-        animation: printHeadMoveHorizontal 2.5s ease-in-out forwards; /* Default animation (Medium speed) */
-        /* animation-delay is removed for dynamic control */
+    .digital-printing-animation {
+         margin: 1rem auto; /* Adjust margin */
+         padding: 0.5rem; /* Adjust padding */
+         max-width: 100%; /* Ensure it doesn't overflow */
     }
 
-    @keyframes paperFeedVertical {
+    .digital-printing-animation svg {
+         width: 100%; /* Ensure SVG scales */
+         height: auto;
+    }
+
+    @keyframes printHeadMoveHorizontal {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(410px); } /* Adjust distance */
+    }
+    
+     @keyframes paperFeedVertical {
         0% { transform: translateY(0); }
-        100% { transform: translateY(300px); } /* Adjust distance */
+        100% { transform: translateY(400px); } /* Adjust distance */
     }
-
-    @keyframes printRevealVertical {
+    
+     @keyframes printRevealVertical {
         0% { height: 0; }
-        50% { height: 150px; } /* Adjust height */
+        30% { height: 150px; } /* Adjust height */
         100% { height: 150px; }
     }
 
@@ -956,7 +996,7 @@ footer {
 
     @keyframes printingTextReveal {
         0% { clip-path: inset(100% 0 0 0); }
-        50% { clip-path: inset(0 0 0 0); }
+        30% { clip-path: inset(0 0 0 0); }
         100% { clip-path: inset(0 0 0 0); }
     }
 
