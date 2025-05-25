@@ -936,32 +936,43 @@ footer {
 }
 
 .print-head {
-    animation: printHeadMoveHorizontal 2.5s infinite linear; /* Print head movement speed - Increased duration */
+    animation: printHeadMoveHorizontal 12s infinite linear; /* Print head movement speed - Match paper feed duration */
     transform-origin: 0 0; /* Animation origin */
 }
 
 /* Paper Feed Animation (Vertical) */
 @keyframes paperFeedVertical {
     0% { transform: translateY(0); } /* Start at the top of the vertical path */
-    100% { transform: translateY(190px); } /* Move paper vertically through the paper area height (approx) */
+    100% { transform: translateY(150px); } /* Move paper vertically through the paper area height (approx) */
 }
 
 .paper-in,
 .paper-out,
 .paper-processing {
-    animation: paperFeedVertical 8s infinite linear; /* Paper feed speed */
+    animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
     transform-origin: 0 0; /* Animation origin */
 }
 
 /* Printing Layer Animation (Reveal printing as paper moves vertically) */
 @keyframes printRevealVertical {
     0% { height: 0; } /* Start with height 0 */
-    100% { height: 190px; } /* Reveal full height of the paper area */
+    100% { height: 150px; } /* Reveal full height of the paper area */
 }
 
 .printing-layer {
     transform-origin: 0 0; /* Animation origin */
-    animation: printRevealVertical 8s infinite linear; /* Match paper feed animation duration */
+    animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+}
+
+/* Printing Text Reveal Animation (using clip-path) */
+@keyframes printingTextReveal {
+    0% { clip-path: inset(100% 0 0 0); } /* Initially completely hidden from the top */
+    100% { clip-path: inset(0 0 0 0); } /* Fully revealed */
+}
+
+.printing-text {
+    animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
+    transform-origin: 0 0; /* Animation origin */
 }
 
 /* Roller Rotation Animation */
@@ -1008,6 +1019,29 @@ footer {
         0% { height: 0; }
         100% { height: 150px; } /* Adjust height */
     }
+
+    .paper-in,
+    .paper-out,
+    .paper-processing {
+        animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
+    }
+
+    .printing-layer {
+        animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+    }
+
+    @keyframes printingTextReveal {
+        0% { clip-path: inset(100% 0 0 0); }
+        100% { clip-path: inset(0 0 0 0); }
+    }
+
+    .printing-text {
+        animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
+    }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 12s infinite linear; /* Adjust duration */
+    }
 }
 
 @media (max-width: 480px) {
@@ -1024,12 +1058,35 @@ footer {
     
      @keyframes paperFeedVertical {
         0% { transform: translateY(0); }
-        100% { transform: translateY(100px); } /* Adjust distance */
+        100% { transform: translateY(150px); } /* Adjust distance */
     }
     
      @keyframes printRevealVertical {
         0% { height: 0; }
-        100% { height: 100px; } /* Adjust height */
+        100% { height: 150px; } /* Adjust height */
+    }
+
+    .paper-in,
+    .paper-out,
+    .paper-processing {
+        animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
+    }
+
+     .printing-layer {
+        animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+    }
+
+    @keyframes printingTextReveal {
+        0% { clip-path: inset(100% 0 0 0); }
+        100% { clip-path: inset(0 0 0 0); }
+    }
+
+    .printing-text {
+        animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
+    }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 12s infinite linear; /* Adjust duration */
     }
 }
 </body>
