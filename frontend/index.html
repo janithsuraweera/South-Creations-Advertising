@@ -91,11 +91,9 @@
 
                 <!-- Paper Input Slot (on the side for horizontal) -->
                 <rect x="0" y="100" width="30" height="150" fill="#b0bec5"/> <!-- Blue Grey -->
-                <rect x="5" y="105" width="20" height="140" fill="#ffffff" class="paper-in"/> <!-- White Paper -->
 
                 <!-- Paper Output Slot (on the other side for horizontal) -->
                 <rect x="520" y="100" width="30" height="150" fill="#90a4ae"/> <!-- Blue Grey -->
-                <rect x="525" y="105" width="20" height="140" fill="#ffffff" class="paper-out"/> <!-- White Paper -->
 
                 <!-- Internal Paper Path Guides (Thinner and integrated) -->
                 <rect x="40" y="90" width="470" height="10" fill="#c5cae9" rx="5" ry="5"/> <!-- Top Guide -->
@@ -107,13 +105,13 @@
                 <circle cx="250" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
                 <circle cx="400" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
 
-                <!-- Paper inside machine (Vertical) -->
-                <rect x="50" y="100" width="450" height="150" fill="#ffffff" class="paper-processing"/> <!-- White Paper -->
+                <!-- Paper inside machine (Vertical) - Renamed to main paper element -->
+                <rect x="50" y="100" width="450" height="150" fill="#ffffff" class="printing-paper"/> <!-- White Paper -->
 
-                <!-- Printing Layer on Paper (Text) -->
+                <!-- Printing Layer on Paper (Text) - Positioned relative to the main paper -->
                 <text x="275" y="175" font-family="Roboto, sans-serif" font-size="25" fill="#212121" text-anchor="middle" class="printing-text">SOUTH CREATION ADVERTISING</text>
 
-                <!-- Printing Layer on Paper (Initially hidden, will be revealed vertically) -->
+                <!-- Printing Layer on Paper (Initially hidden, will be revealed vertically) - Positioned relative to the main paper -->
                 <rect x="50" y="100" width="450" height="0" fill="#212121" class="printing-layer"/> <!-- Dark Grey/Black for print -->
 
                 <!-- Print Head (Animates Horizontally across vertical paper) -->

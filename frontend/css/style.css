@@ -739,6 +739,49 @@ footer {
         bottom: 20px;
         right: 20px;
     }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    @keyframes paperFeedVertical {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(300px); } /* Adjust distance */
+    }
+
+    @keyframes printRevealVertical {
+        0% { height: 0; }
+        50% { height: 150px; } /* Adjust height */
+        100% { height: 150px; }
+    }
+
+    .paper-in,
+    .paper-out,
+    .paper-processing {
+        animation: paperFeedVertical 15s linear forwards; /* Paper feed speed - Increased duration, run once and stay */
+    }
+
+    .printing-layer {
+        animation: printRevealVertical 15s linear forwards; /* Match paper feed animation duration, run once and stay */
+    }
+
+    @keyframes printingTextReveal {
+        0% { clip-path: inset(100% 0 0 0); }
+        50% { clip-path: inset(0 0 0 0); }
+        100% { clip-path: inset(0 0 0 0); }
+    }
+
+    .printing-text {
+        animation: printingTextReveal 15s linear forwards; /* Reveal text over paper feed duration, run once and stay */
+    }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    .roller {
+        animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
 }
 
 @media (max-width: 480px) {
@@ -869,6 +912,49 @@ footer {
         bottom: 15px;
         right: 15px;
     }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    @keyframes paperFeedVertical {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(300px); } /* Adjust distance */
+    }
+
+    @keyframes printRevealVertical {
+        0% { height: 0; }
+        50% { height: 150px; } /* Adjust height */
+        100% { height: 150px; }
+    }
+
+    .paper-in,
+    .paper-out,
+    .paper-processing {
+        animation: paperFeedVertical 15s linear forwards; /* Paper feed speed - Increased duration, run once and stay */
+    }
+
+    .printing-layer {
+        animation: printRevealVertical 15s linear forwards; /* Match paper feed animation duration, run once and stay */
+    }
+
+    @keyframes printingTextReveal {
+        0% { clip-path: inset(100% 0 0 0); }
+        50% { clip-path: inset(0 0 0 0); }
+        100% { clip-path: inset(0 0 0 0); }
+    }
+
+    .printing-text {
+        animation: printingTextReveal 15s linear forwards; /* Reveal text over paper feed duration, run once and stay */
+    }
+
+    .print-head {
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    .roller {
+        animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
+    }
 }
 
 .logo-img {
@@ -936,43 +1022,46 @@ footer {
 }
 
 .print-head {
-    animation: printHeadMoveHorizontal 12s infinite linear; /* Print head movement speed - Match paper feed duration */
+    animation: printHeadMoveHorizontal 2s infinite ease-in-out; /* Print head movement speed - Adjusted duration and timing */
     transform-origin: 0 0; /* Animation origin */
 }
 
 /* Paper Feed Animation (Vertical) */
 @keyframes paperFeedVertical {
     0% { transform: translateY(0); } /* Start at the top of the vertical path */
-    100% { transform: translateY(150px); } /* Move paper vertically through the paper area height (approx) */
+    100% { transform: translateY(400px); } /* Move paper vertically far enough to exit the viewbox */
 }
 
-.paper-in,
-.paper-out,
-.paper-processing {
-    animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
-    transform-origin: 0 0; /* Animation origin */
+.printing-paper {
+    animation: paperFeedVertical 15s linear forwards;
+    transform-origin: 0 0;
+    animation-delay: 0.5s; /* Add a small delay */
 }
 
 /* Printing Layer Animation (Reveal printing as paper moves vertically) */
 @keyframes printRevealVertical {
     0% { height: 0; } /* Start with height 0 */
-    100% { height: 150px; } /* Reveal full height of the paper area */
+    30% { height: 150px; } /* Reveal full height of the paper area within the machine (adjust keyframe) */
+    100% { height: 150px; } /* Stay at full height */
 }
 
 .printing-layer {
-    transform-origin: 0 0; /* Animation origin */
-    animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+    transform-origin: 0 0;
+    animation: printRevealVertical 15s linear forwards;
+    animation-delay: 0.5s; /* Add a small delay */
 }
 
 /* Printing Text Reveal Animation (using clip-path) */
 @keyframes printingTextReveal {
     0% { clip-path: inset(100% 0 0 0); } /* Initially completely hidden from the top */
-    100% { clip-path: inset(0 0 0 0); } /* Fully revealed */
+    30% { clip-path: inset(0 0 0 0); } /* Fully revealed when paper is fully within printing area (adjust keyframe) */
+    100% { clip-path: inset(0 0 0 0); } /* Stay fully revealed */
 }
 
 .printing-text {
-    animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
-    transform-origin: 0 0; /* Animation origin */
+    animation: printingTextReveal 15s linear forwards;
+    transform-origin: 0 0;
+    animation-delay: 0.5s; /* Add a small delay */
 }
 
 /* Roller Rotation Animation */
@@ -982,8 +1071,9 @@ footer {
 }
 
 .roller {
-    animation: rollerRotate 3s infinite linear; /* Rotate rollers */
-    transform-origin: center; /* Rotate around the center */
+    animation: rollerRotate 15s linear forwards;
+    transform-origin: center;
+    animation-delay: 0.5s; /* Add a small delay */
 }
 
 /* Status Indicator Animation (subtle pulse) */
@@ -1012,35 +1102,41 @@ footer {
     
      @keyframes paperFeedVertical {
         0% { transform: translateY(0); }
-        100% { transform: translateY(150px); } /* Adjust distance */
+        100% { transform: translateY(400px); } /* Adjust distance */
     }
     
      @keyframes printRevealVertical {
         0% { height: 0; }
-        100% { height: 150px; } /* Adjust height */
+        30% { height: 150px; } /* Adjust height */
+        100% { height: 150px; }
     }
 
     .paper-in,
     .paper-out,
     .paper-processing {
-        animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
+        animation: paperFeedVertical 15s linear forwards; /* Paper feed speed - Increased duration, run once and stay */
     }
 
     .printing-layer {
-        animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+        animation: printRevealVertical 15s linear forwards; /* Match paper feed animation duration, run once and stay */
     }
 
     @keyframes printingTextReveal {
         0% { clip-path: inset(100% 0 0 0); }
+        30% { clip-path: inset(0 0 0 0); }
         100% { clip-path: inset(0 0 0 0); }
     }
 
     .printing-text {
-        animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
+        animation: printingTextReveal 15s linear forwards; /* Reveal text over paper feed duration, run once and stay */
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 12s infinite linear; /* Adjust duration */
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    .roller {
+        animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
     }
 }
 
@@ -1058,35 +1154,41 @@ footer {
     
      @keyframes paperFeedVertical {
         0% { transform: translateY(0); }
-        100% { transform: translateY(150px); } /* Adjust distance */
+        100% { transform: translateY(400px); } /* Adjust distance */
     }
     
      @keyframes printRevealVertical {
         0% { height: 0; }
-        100% { height: 150px; } /* Adjust height */
+        30% { height: 150px; } /* Adjust height */
+        100% { height: 150px; }
     }
 
     .paper-in,
     .paper-out,
     .paper-processing {
-        animation: paperFeedVertical 12s infinite linear; /* Paper feed speed - Increased duration */
+        animation: paperFeedVertical 15s linear forwards; /* Paper feed speed - Increased duration, run once and stay */
     }
 
      .printing-layer {
-        animation: printRevealVertical 12s infinite linear; /* Match paper feed animation duration */
+        animation: printRevealVertical 15s linear forwards; /* Match paper feed animation duration, run once and stay */
     }
 
     @keyframes printingTextReveal {
         0% { clip-path: inset(100% 0 0 0); }
+        30% { clip-path: inset(0 0 0 0); }
         100% { clip-path: inset(0 0 0 0); }
     }
 
     .printing-text {
-        animation: printingTextReveal 12s infinite linear; /* Reveal text over paper feed duration */
+        animation: printingTextReveal 15s linear forwards; /* Reveal text over paper feed duration, run once and stay */
     }
 
     .print-head {
-        animation: printHeadMoveHorizontal 12s infinite linear; /* Adjust duration */
+        animation: printHeadMoveHorizontal 2s ease-in-out forwards; /* Adjust duration and timing, run once and stay */
+    }
+
+    .roller {
+        animation: rollerRotate 15s linear forwards; /* Rotate rollers, run once and stay */
     }
 }
 </body>
