@@ -127,4 +127,30 @@ style.textContent = `
         }
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);
+
+// Animation Speed Control for Print Head
+document.addEventListener('DOMContentLoaded', function() {
+    const passButtons = document.querySelectorAll('.pass-button');
+    const printHead = document.querySelector('.print-head');
+
+    passButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove existing speed classes
+            printHead.classList.remove('speed-low', 'speed-medium', 'speed-high');
+
+            // Determine which button was clicked and add the corresponding class
+            if (button.classList.contains('pass-button-6')) {
+                printHead.classList.add('speed-low');
+            } else if (button.classList.contains('pass-button-4')) {
+                printHead.classList.add('speed-medium');
+            } else if (button.classList.contains('pass-button-2')) {
+                printHead.classList.add('speed-high');
+            }
+
+            // Restart the animation to apply the new speed
+            // By removing and re-adding the element or triggering a reflow
+            void printHead.offsetWidth; // Trigger reflow
+        });
+    });
+}); 
