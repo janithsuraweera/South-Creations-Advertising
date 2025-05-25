@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Creations Advertising - Digital Printing Solutions</title>
+    
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:url" content="https://southcreations.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="South Creations Advertising" />
+    <meta property="og:description" content="Your Premier Digital Printing Partner in Unawatuna, Sri Lanka" />
+    <meta property="og:image" content="images/logo.jpg" />
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animate On Scroll Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" 
+            nonce="FOKrbAYI">
+    </script>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="South Creations Logo" class="logo-img">
+                <h1>South Creations</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://web.facebook.com/SouthCreationsAdvertising" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- Facebook Like Button -->
+                <div class="fb-like" 
+                     data-href="https://web.facebook.com/SouthCreationsAdvertising" 
+                     data-width=""
+                     data-layout="button" 
+                     data-action="like" 
+                     data-size="small"  
+                     data-share="true">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Welcome to South Creations</h1>
+            <p>Your Premier Digital Printing Partner</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 data-aos="fade-in" data-aos-once="true">Our Services</h2>
+        <div class="digital-printing-animation" data-aos="fade-up" data-aos-once="true">
+            <svg viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg">
+                <!-- Machine Body - Main casing with refined colors (Horizontal) -->
+                <rect x="20" y="50" width="510" height="250" fill="#ffffff" rx="15" ry="15"/> <!-- White -->
+
+                <!-- Darker Top Section (More integrated with the body) -->
+                <rect x="20" y="50" width="510" height="40" fill="#f5f5f5" rx="15" ry="15"/> <!-- Slightly off-white/light grey for subtle contrast -->
+
+                <!-- Control Panel Area (Smaller and repositioned to top left) -->
+                 <rect x="30" y="55" width="70" height="30" fill="#757575" rx="5" ry="5"/> <!-- Dark Grey -->
+                 <circle cx="40" cy="70" r="4" fill="#f4436c" class="status-indicator"/> <!-- Red status light -->
+                 <rect x="55" y="67" width="20" height="6" fill="#bdbdbd" rx="1" ry="1"/> <!-- Simple display -->
+                 <rect x="80" y="67" width="10" height="6" fill="#bdbdbd" rx="1" ry="1"/> <!-- Simple button -->
+
+                <!-- Ink Cartridges (Simplified, on top panel) -->
+                <rect x="110" y="60" width="15" height="15" fill="#1976d2" rx="3" ry="3"/> <!-- Blue -->
+                <rect x="130" y="60" width="15" height="15" fill="#d32f2f" rx="3" ry="3"/> <!-- Red -->
+                <rect x="150" y="60" width="15" height="15" fill="#fbc02d" rx="3" ry="3"/> <!-- Yellow -->
+                <rect x="170" y="60" width="15" height="15" fill="#388e3c" rx="3" ry="3"/> <!-- Green -->
+
+                <!-- Pass Selection Buttons -->
+                <!-- Button 6-Pass -->
+                <rect x="250" y="60" width="70" height="25" fill="#4CAF50" rx="5" ry="5" class="pass-button pass-button-6"/> <!-- Green -->
+                <text x="285" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">6 Pass</text>
+
+                <!-- Button 4-Pass -->
+                <rect x="330" y="60" width="70" height="25" fill="#FF9800" rx="5" ry="5" class="pass-button pass-button-4"/> <!-- Orange -->
+                <text x="365" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">4 Pass</text>
+
+                <!-- Button 2-Pass -->
+                <rect x="410" y="60" width="70" height="25" fill="#F44336" rx="5" ry="5" class="pass-button pass-button-2"/> <!-- Red -->
+                <text x="445" y="77" font-family="Roboto, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" pointer-events="none">2 Pass</text>
+
+                <!-- Note: JavaScript is needed to make these buttons interactive and change animation speed -->
+
+                <!-- Paper Input Slot (on the side for horizontal) -->
+                <rect x="0" y="100" width="30" height="150" fill="#b0bec5"/> <!-- Blue Grey -->
+
+                <!-- Paper Output Slot (on the other side for horizontal) -->
+                <rect x="520" y="100" width="30" height="150" fill="#90a4ae"/> <!-- Blue Grey -->
+
+                <!-- Internal Paper Path Guides (Thinner and integrated) -->
+                <rect x="40" y="90" width="470" height="10" fill="#c5cae9" rx="5" ry="5"/> <!-- Top Guide -->
+                <rect x="40" y="250" width="470" height="10" fill="#c5cae9" rx="5" ry="5"/> <!-- Bottom Guide -->
+
+                <!-- Rollers (Positioned along vertical paper path) -->
+                <!-- Adjusting positions to be within the paper path guides area -->
+                <circle cx="100" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
+                <circle cx="250" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
+                <circle cx="400" cy="170" r="15" fill="#455a64" class="roller"/> <!-- Blue Grey Dark -->
+
+                <!-- Paper inside machine (Vertical) - Renamed to main paper element -->
+                <rect x="50" y="100" width="450" height="150" fill="#ffffff" class="printing-paper"/> <!-- White Paper -->
+
+                <!-- Printing Layer on Paper (Text) - Positioned relative to the main paper -->
+                <text x="275" y="175" font-family="Roboto, sans-serif" font-size="25" fill="#212121" text-anchor="middle" class="printing-text">SOUTH CREATION ADVERTISING</text>
+
+                <!-- Printing Layer on Paper (Initially hidden, will be revealed vertically) - Positioned relative to the main paper -->
+                <rect x="50" y="100" width="450" height="0" fill="#212121" class="printing-layer"/> <!-- Dark Grey/Black for print -->
+
+                <!-- Print Head (Animates Horizontally across vertical paper) -->
+                <!-- Positioned over the paper path -->
+                <rect x="50" y="140" width="40" height="70" fill="#424242" class="print-head"/> <!-- Very Dark Grey -->
+
+            </svg>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-print"></i>
+                <h3>Digital Printing</h3>
+                <p>High-quality digital printing for banners, posters, business cards, and all your printing needs</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Design Services</h3>
+                <p>Professional graphic design for logos, brochures, and marketing materials</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-t-shirt"></i>
+                <h3>Custom Apparel</h3>
+                <p>Custom t-shirt printing and embroidery for teams, events, and businesses</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-sign"></i>
+                <h3>Signage</h3>
+                <p>Custom signs, vehicle wraps, and outdoor advertising solutions</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-id-card"></i>
+                <h3>Business Cards</h3>
+                <p>Professional business card design and printing with premium finishes</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-images"></i>
+                <h3>Photo Printing</h3>
+                <p>High-quality photo printing and photo frame services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 data-aos="fade-in">Our Work</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://web.facebook.com/SouthCreationsAdvertising/posts/pfbid0BVsLUSw8fBEuw9LHp2t95fHWk8thYoRNsdywikNMqeyaXgVGLHLbKQAW348d99Kkl" target="_blank" class="portfolio-link">
+                    <img src="images/portfolio/1.jpg" alt="Our Work 1">
+                    <div class="portfolio-overlay">
+                        <h3>View on Facebook</h3>
+                        <p>Click to see our latest work</p>
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://web.facebook.com/SouthCreationsAdvertising/posts/pfbid07Nv8u1aFPLzsiz7yw3v2LoK7JSGpjvGTiaYhesPguMuyS3kd9upGRcfib4WXgyGcl" target="_blank" class="portfolio-link">
+                    <img src="images/portfolio/2.jpg" alt="Our Work 2">
+                    <div class="portfolio-overlay">
+                        <h3>View on Facebook</h3>
+                        <p>Click to see our latest work</p>
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-in">Contact Us</h2>
+        <div class="contact-container" data-aos="slide-up">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i>+94 76 223 1797</p>
+                <p><i class="fas fa-envelope"></i>scagalle@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> No.15, Eramudugaha Junction, Unawatuna, Sri Lanka</p>
+            </div>
+            <form class="contact-form" data-aos="fade-left" data-aos-delay="100">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" data-aos="fade-up">
+            <div class="footer-section">
+                <h3>South Creations</h3>
+                <p>Your trusted partner in digital printing</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <a href="https://web.facebook.com/SouthCreationsAdvertising" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <!-- Facebook Like Button -->
+                <div class="fb-like" 
+                     data-href="https://web.facebook.com/SouthCreationsAdvertising" 
+                     data-width=""
+                     data-layout="button" 
+                     data-action="like" 
+                     data-size="small"  
+                     data-share="true">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 South Creations Advertising. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <!-- AOS Animate On Scroll Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html> 
