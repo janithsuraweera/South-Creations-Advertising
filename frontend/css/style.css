@@ -932,11 +932,11 @@ footer {
 /* Print Head Animation (Horizontal across vertical paper) */
 @keyframes printHeadMoveHorizontal {
     0%, 100% { transform: translateX(0); } /* Start and end at the same position */
-    50% { transform: translateX(310px); } /* Move horizontally across the paper path length */
+    50% { transform: translateX(410px); } /* Move horizontally across the full paper width */
 }
 
 .print-head {
-    animation: printHeadMoveHorizontal 1.5s infinite linear; /* Print head movement speed */
+    animation: printHeadMoveHorizontal 2.5s infinite linear; /* Print head movement speed - Increased duration */
     transform-origin: 0 0; /* Animation origin */
 }
 
@@ -996,7 +996,7 @@ footer {
     
     @keyframes printHeadMoveHorizontal {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(190px); } /* Adjust distance */
+        50% { transform: translateX(410px); } /* Adjust distance */
     }
     
      @keyframes paperFeedVertical {
@@ -1019,7 +1019,7 @@ footer {
     
     @keyframes printHeadMoveHorizontal {
         0%, 100% { transform: translateX(0); }
-        50% { transform: translateX(130px); } /* Adjust distance */
+        50% { transform: translateX(410px); } /* Adjust distance */
     }
     
      @keyframes paperFeedVertical {
