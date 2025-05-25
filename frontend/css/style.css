@@ -286,6 +286,18 @@ body {
     transform: translateY(0);
 }
 
+.portfolio-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.portfolio-link:hover {
+    color: var(--secondary-color);
+}
+
 /* Contact Section */
 .contact {
     padding: 5rem 5%;
