@@ -904,3 +904,79 @@ footer {
 </head>
 <body>
 // ... existing code ... 
+
+.digital-printing-animation {
+    width: 100%;
+    max-width: 600px; /* Match SVG viewBox width */
+    margin: 2rem auto; /* Center the animation and add spacing */
+    padding: 1rem;
+    background-color: var(--white); /* White background for the animation area */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--shadow-light);
+    overflow: hidden; /* Ensure animations stay within bounds */
+}
+
+.digital-printing-animation svg {
+    display: block; /* Remove extra space below SVG */
+    width: 100%;
+    height: auto;
+}
+
+/* Print Head Animation */
+@keyframes printHeadMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(260px); } /* Move across print area */
+    100% { transform: translateX(0); }
+}
+
+.print-head {
+    animation: printHeadMove 3s infinite linear; /* Apply animation */
+    transform-box: fill-box; /* Use the element's fill box for origin */
+    transform-origin: 0 0; /* Set origin to top-left */
+}
+
+/* Paper Feed Animation */
+@keyframes paperFeedIn {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100px); opacity: 0.8; } /* Move into machine */
+}
+
+@keyframes paperFeedOut {
+    0% { transform: translateX(0); opacity: 0.8; }
+    100% { transform: translateX(100px); opacity: 1; } /* Move out of machine */
+}
+
+.paper-in {
+    animation: paperFeedIn 3s infinite linear; /* Apply animation */
+    transform-box: fill-box;
+    transform-origin: 100% 0; /* Feed from the right edge */
+}
+
+.paper-out {
+    animation: paperFeedOut 3s infinite linear; /* Apply animation */
+    transform-box: fill-box;
+    transform-origin: 0 0; /* Feed from the left edge */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .digital-printing-animation {
+        margin: 1.5rem auto;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-printing-animation {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+    
+    @keyframes printHeadMove {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(200px); } /* Adjust move distance for smaller screens */
+        100% { transform: translateX(0); }
+    }
+}
+</body>
+</rewritten_file>
