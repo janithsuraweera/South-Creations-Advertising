@@ -1042,24 +1042,6 @@ footer {
 }
 
 /* Add a link to Google Fonts for Roboto */
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Creations Advertising - Digital Printing Solutions</title>
-    
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:url" content="https://southcreations.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="South Creations Advertising" />
-    <meta property="og:description" content="Your Premier Digital Printing Partner in Unawatuna, Sri Lanka" />
-    <meta property="og:image" content="images/logo.jpg" />
-    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> /* Added Roboto font */
-</head>
-<body>
-// ... existing code ... 
 
 .digital-printing-animation {
     width: 100%;
@@ -1303,5 +1285,3 @@ footer {
         animation: printHeadMoveHorizontal 1.5s ease-in-out forwards; /* 2-Pass: High speed */
     }
 }
-</body>
-</rewritten_file>
